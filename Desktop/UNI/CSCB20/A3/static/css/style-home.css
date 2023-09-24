@@ -1,0 +1,11 @@
+
+#signup_container{
+  display: none;
+}
+.form_title{
+  text_align: center;
+}
+
+.switch .switch_2{
+  display: none;
+}

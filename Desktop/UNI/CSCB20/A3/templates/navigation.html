@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+  {% block title %}
+  {% endblock %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" 
+    integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" 
+    crossorigin="anonymous">
+  </script>
+  <title>Talkie-Talkie</title>
+</head>
+  
+<body>
+  <!-- navigation bar -->
+  <div class="navigation_bar">
+<!-- I commented out some of the navigation bar code for now     
+    <a href="{{ url_for('home') }}" class="container">
+        <i class="icon"><img src="{{ url_for('static', filename='images/home.png') }}"></i><span>Home</span>
+    </a>
+    <a href="{{ url_for('user', username=session['user']) }}" class ="container" style= "{{ status }}">
+        <i class="icon"><img src="{{ url_for('static', filename='images/user.png') }}"></i><span>User</span>
+    </a>
+    <a href="{{ url_for('logout') }}" class ="container" style= "{{ status }}">
+        <i class="icon"><img src="{{ url_for('static', filename='images/logout.png') }}"></i><span>Logout</span>
+    </a> -->
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('user', username=session['user']) }}" style= "{{ status }}">My Page</a>
+    <a href="{{ url_for('logout') }}" style="{{ status }}">Log Out</a>
+    <img src="{{ url_for('static', filename='images/DarkModeIcon.png') }}" alt="Dark mode" id="dark_mode_icon">
+  </div>
+  {% block content %}
+  {% endblock %}
+  <script src="{{ url_for('static', filename='js/allpages.js') }}"></script>
+</body>
+</html>

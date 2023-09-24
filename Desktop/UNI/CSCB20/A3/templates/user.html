@@ -1,0 +1,77 @@
+{% extends "navigation.html" %}
+{% block title %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style-user.css')}}">
+{% endblock %}
+{% block content %}
+
+<!-- splash -->
+<div class="splash">
+  <p>
+    Hello
+    <br>
+    <span class="name">{{ session.user }}</span>
+  </p>
+</div>
+
+<div class="main">
+
+  <div class="box">
+    <div>
+      <!-- receive flashed messages from the user's session -->
+      {% with messages = get_flashed_messages() %}
+      <!-- if there are messages -->
+      {% if messages %}
+          <ul class=flashes> 
+          <!-- loop through all messages -->
+          {% for message in messages %} 
+            <!-- show the message -->
+            <div> {{ message }} </div>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+      <div id="user_box">
+        <div id="profile">
+          {% include "profile.html" %}
+        </div>
+        <div id="friends">
+          {% include "friends.html" %}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="big_area">
+    <form id="searchUserForm" action="{{ action }}" method="POST" style="display:none;">
+      <input type="text" name="searchInput" placeholder="Username" required>
+      <button>Search</button>
+    </form>
+    <form id="inviteForm" action="{{ action }}" method="POST" style="display:none;">
+      <input type="text" name="inviteInput" placeholder="Username" required list="friendlist">
+        <datalist id="friendlist">
+           {% for friend in friends %}
+          <option value="{{ friend }}">
+          {% endfor %}
+        </datalist>
+      <button>Invite</button>      
+    </form>
+    <form id="deleteForm" action="{{ action }}" method="POST" style="display:none;">
+      <input type="submit" name="delete_Button" value="Yes">
+      <input type="submit" name="delete_Button" value="No">
+    </form>
+    <form id="renameForm" action="{{ action }}" method="POST" style="display:none;">
+      <input type="text" name="renameInput" placeholder="Group name" required>
+      <button>Rename</button>
+    </form>
+    <div id="requests">{% include "requests.html" %}</div>
+    <div id="messages">{% include "messages.html" %}</div>
+
+    <div id="setProfile" style="display:none;">
+      {% include "setProfile.html" %}
+    </div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/userpage.js') }}"></script>
+<script src="{{ url_for('static', filename='js/addchat.js') }}"></script>
+{% endblock%}

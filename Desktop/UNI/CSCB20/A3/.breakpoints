@@ -1,0 +1,106 @@
+{
+  "files": {
+    "functions.py": [
+      {
+        "id": "f234cbc9-96f1-4e9a-bc7c-2d20068042c3",
+        "line": 64,
+        "version": 10176,
+        "index": 1277
+      }
+    ],
+    "main.py": [
+      {
+        "id": "0f4167c6-6016-4adb-874d-ab0e4033e10c",
+        "line": 18,
+        "version": 19448,
+        "index": 646
+      },
+      {
+        "id": "e0949ae1-d931-4512-ac84-e8c019e9a0d3",
+        "line": 18,
+        "version": 19448,
+        "index": 646
+      }
+    ],
+    "static/css/style.css": [
+      {
+        "id": "e3af8412-ae6e-418e-b968-0824dde73b77",
+        "line": 142,
+        "version": 3061,
+        "index": 3105
+      }
+    ],
+    "templates/home.html": [
+      {
+        "id": "a387b33e-9a90-4373-8cf7-6275f0fce509",
+        "line": 35,
+        "version": 2245,
+        "index": 1228
+      }
+    ],
+    "templates/messages.html": [
+      {
+        "id": "65fa7940-d23d-4ed1-ac93-0b59978dea6c",
+        "line": 1,
+        "version": 4512,
+        "index": 0
+      },
+      {
+        "id": "bd2a1f98-49c2-4eb5-be34-178a612bd6ff",
+        "line": 1,
+        "version": 4512,
+        "index": 0
+      },
+      {
+        "id": "79413cc3-a31e-4477-95af-013d4b4ff092",
+        "line": 10,
+        "version": 4512,
+        "index": 313
+      }
+    ],
+    "templates/profile.html": [
+      {
+        "id": "01ec266d-8e92-49b6-b19e-1ebaf4111f1c",
+        "line": 3,
+        "version": 533,
+        "index": 155
+      }
+    ],
+    "templates/setProfile.html": [
+      {
+        "id": "da345d22-6270-4dc8-afe2-4038cd95e4e5",
+        "line": 5,
+        "version": 14,
+        "index": 170
+      }
+    ],
+    "templates/setprofile.html": [
+      {
+        "id": "8eb46c1c-53c1-4391-bdc8-701392006749",
+        "line": 1,
+        "version": 2105,
+        "index": 0
+      }
+    ],
+    "templates/user.html": [
+      {
+        "id": "2a62971b-a06c-4083-9149-cef2eb1f763e",
+        "line": 45,
+        "version": 2391,
+        "index": 1100
+      },
+      {
+        "id": "7ea15b94-b425-4965-bdb4-d7c4f8ea5e18",
+        "line": 49,
+        "version": 2391,
+        "index": 1296
+      },
+      {
+        "id": "c21a3159-a13e-4e89-9348-35aedd676a5c",
+        "line": 69,
+        "version": 2391,
+        "index": 2218
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+<li>
+{% for request in requests: %}
+  <ul>
+    <form action="{{ action }}" method="POST">
+      <input type="text" name="request" value="{{ request }}" readonly>
+      <input type="submit" name="friend_req_button" value="Accept">
+      <input type="submit" name="friend_req_button" value="Refuse">
+    </form>
+  </ul>
+{% endfor %}
+</li>

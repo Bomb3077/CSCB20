@@ -1,0 +1,25 @@
+<input type="submit" value="        Add Friend         "onclick="showContent(0)"></input>
+<br>
+<form action="{{ action }}" method="POST">
+  <input type="submit" name="create_group_button" value="Create Group Chat" id="create_group_button"></input>
+</form>
+
+{% if friends|length > 0 %}
+  <h2>Friends</h2>
+  {% for friend in friends: %}
+    <form action="{{ action }}" method="POST">
+      <input type="submit" name="friend_button" value="{{ friend }}" onclick="showContent(1)">
+    </form>
+  {% endfor %}
+{% endif %}
+
+{% if groups|length > 0 %}
+  <h2>Groups</h2>
+  {% for group in groups: %}
+    <form action="{{ action }}" method="POST">
+      <input type="submit" name="group_button" value="{{ group[1] }}">
+      <input type="text" name="group_id" value="{{ group[0] }}" 
+        readonly style="display:none;">
+    </form>
+  {% endfor %}
+{% endif %}

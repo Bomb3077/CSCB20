@@ -1,0 +1,183 @@
+
+.splash{
+  height: 30vh;
+}
+
+#searchUserForm #messages #functions{
+  display: none;
+}
+
+.main {
+  display: flex;
+  gap: 20px;
+}
+
+li, ul {
+  list-style-type: none;
+}
+
+#user_box{
+  max-height: 800px;
+  overflow: scroll;
+}
+
+#big_area{
+  flex-grow: 1;
+}
+
+.header{
+  background: conic-gradient(from 250deg, var(--color1), var(--color2));
+  margin: -50px -50px 20px -50px;
+  border-radius: 10px 10px 0 0;
+  padding: 20px;
+  color: var(--contrast);
+}
+
+.header .name{
+  font-size: 30px;
+  font-weight: 700;
+  /* Credit to https://designshack.net/articles/css/12-fun-css-text-shadows-you-can-copy-and-paste/ */
+  text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+.header img{
+  filter: invert(1);
+}
+
+#chat_box{
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+#message_box{
+  min-height: 300px;
+  max-height: 800px;
+  overflow: scroll;
+}
+
+#message_send{
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0 0 10px 10px;
+  margin: 20px -50px -50px -50px;
+  padding: 20px;
+  border-top: 0.2px solid rgba(0, 0, 0, 0.25);
+}
+
+#more{
+  position: absolute;
+  right: 0;
+}
+
+#more img{
+  width: 20px; 
+  height: 20px;
+}
+
+#more:hover{
+  cursor: pointer;
+}
+
+.msg{
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.icon_and_message ul{
+  max-width: 30vw;
+  margin: 10px 10px 0 10px;
+  word-wrap: break-word;
+  display: inline-block;
+  color: var(--contrast);
+  border-radius: 10px;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.icon_and_message img{
+  width: 32px;
+  height: 32px;
+  margin: 10px 10px 0 10px;
+  border-radius: 5px;
+}
+
+#user_sent {
+  text-align: right;
+}
+
+#user_sent img{
+  float: right;
+}
+
+#friend_sent{
+  text-align: left;
+}
+
+#friend_sent img{
+  float: left;
+}
+
+#group_sent{
+  text-align: left;
+}
+
+#group_sent img{
+  float: left;
+}
+
+#user_sent ul{
+  background: linear-gradient(130deg, var(--color1), var(--middle));
+}
+
+#friend_sent ul{
+  background: linear-gradient(130deg, var(--middle), var(--color2));
+}
+
+#group_sent ul{
+  background: linear-gradient(130deg, var(--middle), var(--color2));
+}
+
+#setProfile{
+  flex-grow: 1;
+}
+
+@media (max-width: 1000px) {
+  input[type=text]{
+    width: 250px;
+  }
+}
+
+@media (max-width: 850px) {
+  input[type=text]{
+    width: 200px;
+  }
+}
+
+@media (max-width: 760px) {
+  input[type=text]{
+    width: 160px;
+  }
+  .header{
+    margin: -20px -20px 20px -20px;
+  }
+  #message_send{
+    margin: 20px -20px -20px -20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .main{
+    flex-direction: column;
+  }
+}

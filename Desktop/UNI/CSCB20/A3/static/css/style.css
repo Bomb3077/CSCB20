@@ -1,0 +1,204 @@
+/* This is the CSS file for ALL pages */
+
+/* CSS variables (accessible to all CSS files) */
+:root{
+  --main: rgb(25, 39, 40);
+  --light: #e8e8e8;
+  --contrast: white;
+  --hover: rgba(255, 255, 255, 0.5);
+  --color1: #00b09b;
+  --color2: #96c93d;
+  --middle: #6ca76f;
+  --color3: #ea5459;
+  --color4: #f7ba2c;
+  --color1-dark: #038173;
+  --color2-dark: #79a136;
+  --alert: #c83c66;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+  background-color: var(--light);
+}
+
+h2, h3, h4{
+  margin: 15px 0 10px 0;
+  background: linear-gradient(130deg, var(--color3), var(--color4) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main{
+  padding: 50px;
+}
+
+.navigation_bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 12px 0;
+  font-weight: 700;
+  z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px
+}
+  
+.navigation_bar a{
+  text-decoration: none;
+  text-align: center;
+  color: var(--main);
+  cursor: pointer;
+}
+
+.navigation_bar a:hover{
+  color: var(--middle);
+  transition: 0.5s;
+}
+
+.navigation_bar img{
+  height: 20px;
+  cursor: pointer;
+}
+
+.splash{
+  background: conic-gradient(from 250deg, var(--color1), var(--color2));
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 200px 100px;
+  color: var(--contrast);
+  font-weight: 700;
+  font-size: 30px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: rgba(108, 167, 111, 0.2) 0px 20px 25px -5px, rgba(108, 167, 111, 0.15) 0px 10px 10px -5px;
+  /* Credit to https://designshack.net/articles/css/12-fun-css-text-shadows-you-can-copy-and-paste/ */
+  text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+.splash p{
+  animation: fadein 2s;
+}
+
+@keyframes fadein{
+  from {opacity: 0;}
+  to   {opacity: 1;}
+}
+
+.splash .name{
+  font-size: 100px;
+}
+
+input[type=text], input[type=password]{
+  margin: 10px 10px 10px 0;
+  width: 350px;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  border: none;
+  background-color: var(--light);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+input[type=checkbox]{
+  accent-color: var(--color3);
+  margin-right: 10px;
+}
+
+input[type=submit], button, input[type=button]{
+  margin: 10px 0;
+  height: 40px;
+  padding: 0 20px;
+  -webkit-appearance:none;
+  border-radius: 10px;
+  font-weight: 700;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  background-color: var(--main);
+  color: var(--contrast);
+  cursor: pointer;
+}
+
+input[type=submit]:hover, button:hover, input[type=button]:hover{
+  color: var(--hover);
+  background-color: var(--middle);
+  transition: 0.5s;
+}
+
+.box {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  background-color: var(--light);
+}
+
+.flashes{
+  color: var(--alert);
+  font-weight: 700;
+}
+
+.dark_mode{
+  background-color: var(--main) !important;
+  color: var(--contrast);
+}
+
+.color_dark_mode{
+  background: conic-gradient(from 250deg, var(--color1-dark), var(--color2-dark)) !important;
+}
+
+.navigation_bar_dark_mode{
+  background-color: rgba(25, 39, 40, 0.8);
+}
+
+.navigation_bar_dark_mode a{
+  color: var(--contrast);
+}
+
+.navigation_bar_dark_mode img{
+  filter: invert(1);
+}
+
+@media (max-width: 760px) {
+  .main, .box{
+    padding: 20px;
+  }
+  .splash .name{
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 450px) {
+  input[type=text], input[type=password]{
+    width: 250px;
+  }
+}

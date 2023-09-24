@@ -1,0 +1,27 @@
+******** Names and Student Numbers ********
+
+Vincent Wang - 1009411557
+Benjamin Yu Sheng Chang - 1008958736
+Yining Liu - 1006759982
+
+*************** Description ***************
+
+Welcome to Talkie-Talkie!
+
+This is a web chat application.
+
+There are options to send private messages to friends, as well as create group chats.
+
+Under My Profile, you can upload a custom profile picture that will be displayed in messages.
+
+You can send friend requests to specific users by searching for their username.
+
+For group chats, you can invite friends, rename the group, as well as delete the group.
+
+*******************************************
+For testing purposes, you will require more than one account. Make sure to use two different browsers or use your browser's private mode in a separate window.
+
+For some features (friend requests, etc.), you need to reload your page to see the updates.
+
+Please use Google Chrome or Microsoft Edge.
+*******************************************

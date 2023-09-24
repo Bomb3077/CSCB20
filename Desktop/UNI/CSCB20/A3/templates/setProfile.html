@@ -1,0 +1,11 @@
+<form action="/user/profile" method="POST" enctype="multipart/form-data">
+  <div class="box">
+    <div>
+      <h2 id="profile_username">{{ session.user }}'s Profile</h2>
+      <img id="user_icon" style="width: 200px; height: 200px;" src="{{ url_for('static', filename=icon_url) }}"><br></li>
+      <input type="file" id="icon_upload" name="icon_upload">
+      <br>
+      <input type="submit" id="icon_update" value="Update Profile">
+    </div>
+  </div>
+</form>

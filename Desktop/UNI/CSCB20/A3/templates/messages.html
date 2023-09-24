@@ -1,0 +1,38 @@
+
+<div class="box">
+  <div id="chat_box">
+    {% if 'friend' in session or 'group' in session %}
+      <div class="header">
+      {% if 'friend' in session %}
+        <p class="name">{{ session.friend }}</p>
+        <p>Private messages with {{ session.friend }}</p>
+      </div>
+      {% elif 'group' in session %}
+        <div id="more">
+          <img src="{{ url_for('static', filename='images/more.png')}}" onclick="showFunctions(this)"> 
+        </div>
+        <p class="name">{{ session.groupname }}</p>
+        <p>Group messages with group {{ session.groupname }}</p>
+      </div>
+      {% endif %}
+
+      <div id="functions" style="display: none;">
+        <input type="submit" value="Invite" onclick="showContent(2)"></input>
+        <input type="submit" value="Rename" onclick="showContent(4)"></input>
+        <input type="submit" value="Delete" onclick="showContent(5)"></input>
+      </div>
+  
+      <div id="message_box">Loading...</div>
+    
+      <div id="message_send">
+        <form id="messageForm" action="{{ action }}" method="POST">
+          <input type="text" name="messageInput" id="messageInput" placeholder="Message"required>
+          <button id="messageButton">Send</button>
+        </form>
+      </div>
+    {% else %}
+      <h2>Welcome</h2>
+      <p>Welcome to My Page {{ session.user }}!</p>
+    {% endif %}
+  </div>
+</div>
